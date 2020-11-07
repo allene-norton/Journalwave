@@ -69,7 +69,7 @@ class Cli
             Whirly.status = "Breathe in..."
             sleep 4
         end
-        Whirly.start do
+        Whirly.start 
             Whirly.status = "Hold..."
             sleep 8
         end
@@ -176,9 +176,7 @@ class Cli
         new_text = a.zip(b).flatten
         new_text.pop
         insert = new_text.join
-        #binding.pry 
         url = URI("https://twinword-emotion-analysis-v1.p.rapidapi.com/analyze/?text=#{insert}")
-        #binding.pry 
 
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
