@@ -10,7 +10,7 @@ We wanted to build an app using object relationships that allows the user to cre
 
 ![Alt text](jwave_screenshot.png?raw=true "Title Screen")
 
-![Demo Gif](https://github.com/allene-norton/Journalwave/blob/main/journalwavedemogif.gif)
+![Demo Gif](https://github.com/allene-norton/Journalwave/blob/main/journalwavedemogif.gif?raw=true)
 
 ## Getting Started
 
