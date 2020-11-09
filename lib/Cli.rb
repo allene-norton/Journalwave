@@ -140,7 +140,9 @@ class Cli
         journal_name = @current_journal.name 
         @prompt
         puts `clear`
-        puts "Welcome to your #{journal_name} journal!"
+        puts "Welcome to your " + "#{journal_name}".red + " journal!"
+        puts "\n"
+        puts "\n"
         entry = prompt.ask("Write a sentence here:") do |q|
             q.required true
             q.validate /\D\w\s./
@@ -204,7 +206,7 @@ class Cli
         puts `clear`
         fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/Journalwave/lib/beach'}
         sleep(13)
-        puts "\n \n Thank you for taking the time to reflect on your day! Taking you back home.....".blue 
+        puts "\n \n Thank you for taking the time to reflect on your day! Taking you back home.....".yellow 
         sleep 3
         puts `clear`
         menu 

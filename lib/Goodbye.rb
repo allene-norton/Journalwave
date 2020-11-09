@@ -5,7 +5,8 @@ class Goodbye
     def bye 
         fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/Journalwave/lib/bye'}
         sleep 17
-        pid = fork{ system 'killall', 'afplay' }
+        # pid = fork{ system 'killall', 'afplay' }
+        puts `clear`
         exit
     end 
 end
