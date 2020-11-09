@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
+gem 'dotenv'
 gem "sinatra-activerecord", '~>2.0'
 gem "sqlite3", '~>1.4.2'
 gem "pry"
@@ -15,4 +16,3 @@ gem 'paint'
 gem 'awesome_print'
 gem 'lolcat'
 gem 'colorize'
-gem 'dotenv'

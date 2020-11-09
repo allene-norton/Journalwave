@@ -58,7 +58,7 @@ class Cli
 
     def breathe
         puts `clear`
-        fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/ruby-project-guidelines-atx01-seng-ft-071320/lib/ascii_breathein.txt'}
+        fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/Journalwave/lib/ascii_breathein.txt'}
         sleep 7
         puts "Clear your mind and focus on your breath."
         sleep(1)
@@ -69,7 +69,7 @@ class Cli
             Whirly.status = "Breathe in..."
             sleep 4
         end
-        Whirly.start 
+        Whirly.start do
             Whirly.status = "Hold..."
             sleep 8
         end
@@ -125,7 +125,9 @@ class Cli
         journal_select = prompt.select("Which journal best describes what you would like to write about?", ["Personal", "Work", "Activity"])
         @current_journal = Journal.find_or_create_by(name: journal_select)
         sleep(1.5)
+        puts "\n"
         puts "Great! Let's get to writing."
+        puts "\n"
         sleep(1.5)
         journal_entry
     end 
@@ -184,7 +186,7 @@ class Cli
 
         request = Net::HTTP::Get.new(url)
         request["x-rapidapi-host"] = 'twinword-emotion-analysis-v1.p.rapidapi.com'
-        request["x-rapidapi-key"] = ENV['EMOTION_API_KEY']
+        request["x-rapidapi-key"] = ENV["EMOTION_API_KEY"]
 
         response = http.request(request)
         result = JSON.parse(response.read_body)
@@ -200,7 +202,7 @@ class Cli
 
     def moment_of_zen
         puts `clear`
-        fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/ruby-project-guidelines-atx01-seng-ft-071320/lib/beach'}
+        fork{exec 'lolcat -a -d 4 /Users/a_norton/mod1/Project/Journalwave/lib/beach'}
         sleep(13)
         puts "\n \n Thank you for taking the time to reflect on your day! Taking you back home.....".blue 
         sleep 3
@@ -326,8 +328,7 @@ class Cli
                 end
             end
             after_entry_options
-    end
+        end
+    end 
 
-
-end
 
