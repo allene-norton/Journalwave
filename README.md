@@ -6,9 +6,11 @@ A simple, retro-futuristic journal app that can analyze the emotions of your ent
 
 We wanted to build an app using object relationships that allows the user to create journal entries and perform basic search, store, and delete functions. This journal app allows you to do all of that, and more.
 
-### Screenshot
+### Demo
 
 ![Alt text](jwave_screenshot.png?raw=true "Title Screen")
+
+![Demo Gif](https://github.com/allene-norton/Journalwave/blob/main/journalwavedemogif.gif)
 
 ## Getting Started
 
